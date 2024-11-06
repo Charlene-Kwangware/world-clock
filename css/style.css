@@ -12,12 +12,22 @@ h1 {
   font-size: 45px;
   color: rgb(255, 125, 4);
 }
+h2 {
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  color: #ff7d04;
+  font-size: 35px;
+  margin: 40px 0px 10px 0px;
+}
 select {
   padding: 10px;
   width: 100%;
   font-size: 17px;
   color: rgb(121, 121, 2);
   background-color: rgb(253, 210, 130);
+}
+.cities {
+  display: flex;
+  justify-content: space-between;
 }
 .container {
   margin: 30px 50px 30px 100px;
@@ -27,4 +37,16 @@ select {
   box-shadow: 7px 5px 11px orangered;
   border: 2px solid rgb(255, 255, 171);
   border-radius: 20px;
+}
+.date {
+  font-size: 15px;
+  color: rgb(121, 121, 2);
+}
+.time {
+  position: relative;
+  top: 45px;
+  right: 50px;
+  font-size: 45px;
+  color: rgb(121, 121, 2);
+  font-size: bold;
 }
