@@ -4,7 +4,7 @@ body {
 footer {
   font-size: 18px;
   color: rgb(184, 8, 8);
-  margin-left: 100px;
+  text-align: center;
 }
 
 h1 {
@@ -24,13 +24,15 @@ select {
   font-size: 17px;
   color: rgb(121, 121, 2);
   background-color: rgb(253, 210, 130);
+  border: 1px solid white;
+  box-shadow: 2px 2px 7px orangered;
 }
 .cities {
   display: flex;
   justify-content: space-between;
 }
 .container {
-  margin: 30px 50px 30px 100px;
+  margin: 30px auto;
   padding: 20px;
   background-color: rgb(252, 252, 56);
   max-width: 700px;
