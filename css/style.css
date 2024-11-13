@@ -30,6 +30,11 @@ select {
 .cities {
   display: flex;
   justify-content: space-between;
+  padding-bottom: 15px;
+  border-bottom: 1px dashed #ff7d04;
+}
+.cities:last-child {
+  border: none;
 }
 .container {
   margin: 30px auto;
