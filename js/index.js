@@ -30,12 +30,17 @@ function updateTime() {
 
 function updateCity(event) {
   let cityTime = event.target.value;
+  if (cityTime === "current") {
+    cityTime = moment.tz.guess();
+  }
   let cityTimeElement = cityTime
-    .replace("Africa/Johannesburg", "Johannesburg")
-    .replace("Africa/Harare", "Mufakose");
+    .split("/")[1]
+    .replace("Harare", "Mufakose")
+    .replace("_", " ");
 
   let cityElement = document.querySelector("#cities");
   let cityTimeZone = moment.tz(cityTime);
+
   cityElement.innerHTML = `
  <div class="cities" id="">
           <div>
