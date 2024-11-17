@@ -22,10 +22,32 @@ function updateTime() {
   let tokyoElements = document.querySelector("#tokyo");
   let tokyoDate = tokyo.querySelector(".date");
   let tokyoTime = tokyoElements.querySelector(".time");
-  tokyoMoment = moment.tz("America/Los_Angeles");
+  tokyoMoment = moment.tz("Asia/Tokyo");
 
   tokyoDate.innerHTML = tokyoMoment.format("Do MMMM YYYY");
   tokyoTime.innerHTML = tokyoMoment.format("h:mm:ss [<small>]A[</small>]");
 }
 
+function updateCity(event) {
+  let cityTime = event.target.value;
+  let cityTimeElement = cityTime
+    .replace("Africa/Johannesburg", "Johannesburg")
+    .replace("Africa/Harare", "Mufakose");
+
+  let cityElement = document.querySelector("#cities");
+  let cityTimeZone = moment.tz(cityTime);
+  cityElement.innerHTML = `
+ <div class="cities" id="">
+          <div>
+            <h2>${cityTimeElement}</h2>
+            <div class="date">${cityTimeZone.format("Do MMMM YYYY")}</div>
+          </div>
+          <div class="time">${cityTimeZone.format(
+            "h:mm:ss [<small>]A[</small>]"
+          )}</div>
+        </div>`;
+}
+
+let citiesSelectElement = document.querySelector("#city-select");
+citiesSelectElement.addEventListener("change", updateCity);
 setInterval(updateTime, 1000);
