@@ -4,7 +4,7 @@ function updateTime() {
   let pretoriaTime = pretoriaElements.querySelector(".time");
   pretoriaMoment = moment.tz("Africa/Johannesburg");
 
-  pretoriaDate.innerHTML = moment().format("Do MMMM YYYY");
+  pretoriaDate.innerHTML = pretoriaMoment.format("Do MMMM YYYY");
   pretoriaTime.innerHTML = pretoriaMoment.format(
     "h:mm:ss [<small>]A[</small>]"
   );
@@ -14,7 +14,7 @@ function updateTime() {
   let losAngelesTime = losAngelesElements.querySelector(".time");
   losAngelesMoment = moment.tz("America/Los_Angeles");
 
-  losAngelesDate.innerHTML = moment().format("Do MMMM YYYY");
+  losAngelesDate.innerHTML = losAngelesMoment.format("Do MMMM YYYY");
   losAngelesTime.innerHTML = losAngelesMoment.format(
     "h:mm:ss [<small>]A[</small>]"
   );
@@ -24,7 +24,7 @@ function updateTime() {
   let tokyoTime = tokyoElements.querySelector(".time");
   tokyoMoment = moment.tz("America/Los_Angeles");
 
-  tokyoDate.innerHTML = moment().format("Do MMMM YYYY");
+  tokyoDate.innerHTML = tokyoMoment.format("Do MMMM YYYY");
   tokyoTime.innerHTML = tokyoMoment.format("h:mm:ss [<small>]A[</small>]");
 }
 
